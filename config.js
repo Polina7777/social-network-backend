@@ -1,20 +1,15 @@
-import { initializeApp } from "firebase/app";
-import { getAuth } from "firebase/auth";
+import { initializeApp } from 'firebase/app';
+import { getAuth } from 'firebase/auth';
 const firebaseConfig = {
-  apiKey: "AIzaSyAjDncqpStntXs_UE7JdUKVO7IWNqJmmHU",
-  authDomain: "social-network-1628d.firebaseapp.com",
-  projectId: "tutorial-e06c1",
-  storageBucket: "tutorial-e06c1.appspot.com",
-  messagingSenderId: "863505404334",
-  appId: "1:863505404334:web:132118b0d6acd7dfa3f83f",
-  measurementId: "G-SW2M0FYQG5",
+  apiKey: 'AIzaSyAjDncqpStntXs_UE7JdUKVO7IWNqJmmHU',
+  authDomain: 'social-network-1628d.firebaseapp.com',
+  projectId: 'social-network-1628d',
+  storageBucket: 'social-network-1628d.appspot.com',
+  messagingSenderId: '51838455626',
+  appId: '1:51838455626:web:e50feece32d9719fa63bb3',
+  measurementId: 'G-H7PDWC18HL',
 };
 
-const app = initializeApp(firebaseConfig)
-const auth = getAuth(app);
-const db = app.firestore();
-
-export {
-    auth,
-    db
-}
+const app = initializeApp(firebaseConfig);
+export const auth = getAuth(app);
+export const db = app.firestore();
