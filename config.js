@@ -1,5 +1,7 @@
-import { initializeApp } from 'firebase/app';
-import { getAuth } from 'firebase/auth';
+const firebase = require('firebase/compat/app');
+require("firebase/compat/firestore")
+// import { getFirestore, collection, getDocs } from 'firebase/firestore';
+
 const firebaseConfig = {
   apiKey: 'AIzaSyAjDncqpStntXs_UE7JdUKVO7IWNqJmmHU',
   authDomain: 'social-network-1628d.firebaseapp.com',
@@ -10,6 +12,8 @@ const firebaseConfig = {
   measurementId: 'G-H7PDWC18HL',
 };
 
-const app = initializeApp(firebaseConfig);
-export const auth = getAuth(app);
-export const db = app.firestore();
+const app = firebase.initializeApp(firebaseConfig);
+// export const auth = getAuth(app);
+console.log(app)
+const db = app.firestore();
+module.exports = { db };
